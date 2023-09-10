@@ -1,0 +1,277 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+body {
+  padding-bottom: 50px;
+}
+.top-bar {
+  background-color: grey;
+  color: grey;
+  height: 4px;
+  margin: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+}
+.main-head {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid lightgrey;
+}
+.main-title {
+  text-align: center;
+  margin: 0;
+}
+.add-new-btn {
+  position: absolute;
+  top: 5.5px;
+  right: 0px;
+  background-color: transparent;
+  color: black;
+  padding: 21px 22px;
+  cursor: pointer;
+}
+.add-new-btn:hover {
+  background-color: grey;
+  color: white;
+}
+.container.obituary-open .add-new-btn:hover {
+  cursor: default;
+  background-color: inherit;
+  color: inherit;
+}
+#empty-holder {
+  display: flex;
+}
+#empty-msg {
+  margin: 100px auto;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(159, 159, 159);
+}
+.exit-x {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+#x-character {
+  font-size: 30px;
+  margin: 0;
+  cursor: pointer;
+}
+.obituary-create-cont {
+  display: flex;
+  z-index: 999;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#obituary-img {
+  width: 220px;
+  height: 110px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.obituary-head {
+  margin: 30px;
+}
+.img-select-cont {
+  margin-bottom: 30px;
+}
+#write-obituary {
+  background-color: turquoise;
+  border: none;
+  border-radius: 4px;
+  padding: 15px;
+  cursor: pointer;
+  margin: 30px;
+  font-size: 15px;
+  padding-left: 130px;
+  padding-right: 130px;
+}
+#write-obituary:hover {
+  background-color: rgb(54, 188, 174);
+}
+#img-select:hover {
+  text-decoration: underline;
+}
+#file-name {
+  background-color: rgb(217, 217, 217, 0.4);
+}
+.date-input {
+  outline: none;
+  border: none;
+}
+#name-in {
+  padding: 10px;
+  width: 420px;
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-align: left !important;
+  border: 1px solid black;
+  outline: none;
+}
+#name-in:focus {
+  border-color: turquoise !important;
+}
+.age-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.born-cont, .died-cont {
+  display: flex;
+  align-items: center;
+}
+.born-cont p, .died-cont p {
+  margin: 0;
+  padding-right: 5px;
+}
+.date-input {
+  width: 150px;
+}
+.born-cont {
+  margin-right: 50px;
+}
+#create-new-title {
+  font-size: 28px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode'
+}
+.obituary-open {
+  opacity: 0.08;
+  z-index: -1;
+}
+
+.obituary-item {
+  display: flex;
+  width: 290px;
+  height: fit-content;
+  border: 1px solid rgb(225, 225, 225);
+  background-color: rgb(250, 250, 250);
+  box-shadow: inset 0px -5px 5px -5px rgba(0,0,0,0.5);
+  border-radius: 6px 6px 6px 6px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  opacity: 0;
+}
+.obituary-item img {
+  width: 290px;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 6px 6px 0 0;
+
+}
+.description {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.obituary-item p {
+  margin: 0;
+  font-size: 16px;
+  margin-top: 5px;
+  text-align: center;
+}
+@media screen and (max-width: 1320px) {
+  .obituary-item {
+    width: 450px;
+  }
+  .obituary-item img {
+    width: 450px;
+  }
+  .obituary-item p {
+    font-size: 17px;
+  }
+}
+.obituary-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.description {
+  padding-top: 12px;
+}
+.obituary-list .obituary-item:nth-child(odd) {
+  margin-right: 20px;
+}
+.obituary-list .obituary-item:nth-child(even) {
+  margin-left: 20px;
+}
+.fade-in {
+  opacity: 1;
+  animation-name: fade-in;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#disabled-button {
+  background-color: grey;
+  border: none;
+  border-radius: 4px;
+  padding: 15px;
+  cursor: pointer;
+  margin: 30px;
+  font-size: 15px;
+  padding-left: 130px;
+  padding-right: 130px;
+}
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.audio-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.play-pause-button {
+  width: 90px;
+  height: 30px;
+  z-index: 999;
+  background-color: rgb(225, 225, 225);
+  font-size: 19px;
+  cursor: pointer;
+}
+.play-pause-button:hover {
+  background-color: rgb(200, 200, 200);
+}
+#pauserline{
+  font-weight: 900;
+}
+
